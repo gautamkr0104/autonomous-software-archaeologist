@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/app
+      - asa-data:/app/data
+    environment:
+      - ASA_DEBUG=true
+      - ASA_LOG_LEVEL=INFO
+      - ASA_DATABASE_URL=sqlite+aiosqlite:///app/data/asa.db
+    command: >
+      python -m uvicorn asa.api.app:create_app
+      --host 0.0.0.0 --port 8000 --factory --reload
+
+  frontend:
+    image: node:20-slim
+    working_dir: /app
+    volumes:
+      - ../frontend:/app
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    depends_on:
+      - backend
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  asa-data:
+  redis-data:

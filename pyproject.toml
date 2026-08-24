@@ -1,0 +1,86 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asa"
+version = "0.1.0"
+description = "Autonomous Software Archaeologist — reconstructs how software works from repositories"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "ASA Contributors" }]
+
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "sqlalchemy>=2.0.23",
+    "asyncpg>=0.29.0",
+    "alembic>=1.13.0",
+    "gitpython>=3.1.40",
+    "tree-sitter>=0.20.4",
+    "tree-sitter-languages>=1.10.0",
+    "networkx>=3.2.1",
+    "httpx>=0.25.2",
+    "typer[all]>=0.9.0",
+    "rich>=13.7.0",
+    "structlog>=23.2.0",
+    "cryptography>=41.0.7",
+    "docker>=7.0.0",
+    "celery[redis]>=5.3.6",
+    "redis>=5.0.1",
+    "pyjwt>=2.8.0",
+    "jinja2>=3.1.2",
+    "aiofiles>=23.2.1",
+    "python-multipart>=0.0.6",
+    "tiktoken>=0.5.2",
+    "chromadb>=0.4.22",
+    "defusedxml>=0.7.1",
+    "packaging>=23.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-asyncio>=0.23.2",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "httpx>=0.25.2",
+    "mypy>=1.8.0",
+    "ruff>=0.1.9",
+    "pre-commit>=3.6.0",
+    "factory-boy>=3.3.1",
+]
+neo4j = ["neo4j>=5.16.0"]
+llm = ["openai>=1.8.0", "anthropic>=0.12.0"]
+benchmark = ["pandas>=2.1.4", "tabulate>=0.9.0", "matplotlib>=3.8.2"]
+
+[project.scripts]
+asa = "asa.cli.main:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/asa"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+select = ["E", "F", "I", "N", "W", "UP", "S", "B", "A", "C4", "T20"]
+ignore = ["S603", "S607", "B008"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "security: Security tests",
+    "benchmark: Benchmark tests",
+]
