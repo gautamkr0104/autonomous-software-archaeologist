@@ -125,7 +125,7 @@ Every finding produced by ASA includes:
 ```bash
 # Clone the repository
 git clone https://github.com/gautamkr0104/autonomous-software-archaeologist.git
-cd asa
+cd autonomous-software-archaeologist
 
 # Install Python dependencies
 pip install -e ".[dev]"
@@ -300,7 +300,7 @@ asa/
 
 ```bash
 git clone https://github.com/gautamkr0104/autonomous-software-archaeologist.git
-cd asa
+cd autonomous-software-archaeologist
 pip install -e ".[dev]"
 cd frontend && npm install && cd ..
 ```
