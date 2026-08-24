@@ -5,10 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/gautamkr0104/asa/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+  <a href="https://github.com/gautamkr0104/autonomous-software-archaeologist/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.11%2B-blue.svg" alt="Python 3.11+" /></a>
-  <a href="https://github.com/gautamkr0104/asa/actions"><img src="https://img.shields.io/github/actions/workflow/status/gautamkr0104/asa/ci.yml?branch=main" alt="CI" /></a>
-  <a href="https://github.com/gautamkr0104/asa"><img src="https://img.shields.io/github/stars/gautamkr0104/asa?style=social" alt="Stars" /></a>
+  <a href="https://github.com/gautamkr0104/autonomous-software-archaeologist/actions"><img src="https://img.shields.io/github/actions/workflow/status/gautamkr0104/autonomous-software-archaeologist/ci.yml?branch=main" alt="CI" /></a>
+  <a href="https://github.com/gautamkr0104/autonomous-software-archaeologist"><img src="https://img.shields.io/github/stars/gautamkr0104/autonomous-software-archaeologist?style=social" alt="Stars" /></a>
 </p>
 
 ---
@@ -124,7 +124,7 @@ Every finding produced by ASA includes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/gautamkr0104/asa.git
+git clone https://github.com/gautamkr0104/autonomous-software-archaeologist.git
 cd asa
 
 # Install Python dependencies
@@ -299,7 +299,7 @@ asa/
 ### Setup
 
 ```bash
-git clone https://github.com/gautamkr0104/asa.git
+git clone https://github.com/gautamkr0104/autonomous-software-archaeologist.git
 cd asa
 pip install -e ".[dev]"
 cd frontend && npm install && cd ..
