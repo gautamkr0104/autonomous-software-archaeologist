@@ -31,6 +31,7 @@ ASA accepts a GitHub repository (or local path) and **autonomously reconstructs*
 - [Contributing](#contributing)
 - [License](#license)
 - [Author](#author)
+- [Credits](#credits)
 
 ---
 
@@ -393,6 +394,14 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 ## Author
 
 **Gautam Kumar** — [@gautamkr0104](https://github.com/gautamkr0104)
+
+---
+
+## Credits
+
+The visual design and branding of ASA were created by **Pihu**.
+
+Follow her work on Instagram: [@jusst._.pihu](https://www.instagram.com/jusst._.pihu/)
 
 ---
 
