@@ -399,9 +399,9 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 
 ## Credits
 
-The visual design and branding of ASA were created by **Pihu**.
+ASA's visuals were crafted by **Pihu** — part of this journey since the localhost days.
 
-Follow her work on Instagram: [@jusst._.pihu](https://www.instagram.com/jusst._.pihu/)
+Say hi: [@jusst._.pihu](https://www.instagram.com/jusst._.pihu/)
 
 ---
 
